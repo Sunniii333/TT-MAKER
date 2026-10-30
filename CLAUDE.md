@@ -41,6 +41,8 @@ Checks: `python3 test_render.py` (offline).
 }
 ```
 
+- `max_seconds` (optional, default 60): per-episode length limit, for when the user asks for longer clips.
+- `rate` (optional, default "+0%"): edge-tts speaking rate, e.g. "+15%" to fit more words in.
 - Coordinates are on a 180x320 canvas. The scene lives in y 0–186 (floor/feet at y=186); the subtitle box covers
   y≈196–251; keep things out of the top ~50px (TikTok header + EP badge) and right of x≈150 (TikTok buttons).
 - `bg`: classroom, room, city, nature, space, office, plain (dark grid, good for numbers/infographics).

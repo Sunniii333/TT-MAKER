@@ -94,9 +94,9 @@ def validate(spec):
 
 # --- speech -------------------------------------------------------------------------------------
 
-async def _synth(text, voice, mp3, js):
+async def _synth(text, voice, rate, mp3, js):
     proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy")  # edge-tts ignores proxy env on its own
-    com = edge_tts.Communicate(text, voice, boundary="WordBoundary", proxy=proxy)
+    com = edge_tts.Communicate(text, voice, rate=rate, boundary="WordBoundary", proxy=proxy)
     audio, words = bytearray(), []
     async for ch in com.stream():
         if ch["type"] == "audio":
@@ -107,16 +107,16 @@ async def _synth(text, voice, mp3, js):
     js.write_text(json.dumps(words, ensure_ascii=False))  # written last: its presence marks a complete cache entry
 
 
-def tts(text, voice):
+def tts(text, voice, rate="+0%"):
     """-> (mono float32 samples at SR, [[offset_s, duration_s, word], ...]); cached on disk."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    key = hashlib.sha1(f"{voice}|{text}".encode()).hexdigest()[:16]
+    key = hashlib.sha1((f"{voice}|{text}" + (f"|{rate}" if rate != "+0%" else "")).encode()).hexdigest()[:16]
     mp3, js = CACHE / f"{key}.mp3", CACHE / f"{key}.json"
     for attempt in range(4):
         if js.exists():
             break
         try:
-            asyncio.run(_synth(text, voice, mp3, js))
+            asyncio.run(_synth(text, voice, rate, mp3, js))
         except Exception as e:  # edge-tts is an unofficial endpoint: retry transient failures / rate limits
             if attempt == 3:
                 raise SystemExit(f"TTS failed for {text!r}: {e}")
@@ -182,7 +182,7 @@ class Scene:
     def __init__(self, sc, spec, voice):
         self.sc, self.spec = sc, spec
         self.say = sc["say"].strip()
-        self.pcm, self.words = tts(self.say, voice)
+        self.pcm, self.words = tts(self.say, voice, spec.get("rate", "+0%"))
         self.pts = reveal_points(self.say, self.words)
         self.frames = math.ceil((len(self.pcm) / SR + TAIL) * FPS)
         cuts = [c for _, c in self.pts] + [i for i, ch in enumerate(self.say) if ch == " "]
@@ -273,8 +273,9 @@ def render_episode(spec, ep, n, total, out_dir):
     voice = spec.get("voice", VOICE)
     scenes = [Scene(sc, spec, voice) for sc in ep["scenes"]]
     secs = sum(s.frames for s in scenes) / FPS
-    if secs > MAX_SECONDS:
-        raise SystemExit(f"EP{n}: {secs:.1f}s is over {MAX_SECONDS}s; shorten or split the episode")
+    limit = spec.get("max_seconds", MAX_SECONDS)
+    if secs > limit:
+        raise SystemExit(f"EP{n}: {secs:.1f}s is over {limit}s; shorten or split the episode")
 
     spf = SR // FPS
     audio = np.zeros(sum(s.frames for s in scenes) * spf, np.float32)

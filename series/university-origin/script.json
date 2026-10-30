@@ -1,0 +1,225 @@
+{
+  "series": "มหาวิทยาลัยเกิดจากวินมอเตอร์ไซค์?",
+  "max_seconds": 135,
+  "rate": "+15%",
+  "sprites": {
+    "bike": {
+      "palette": {"r": "red", "s": "silver", "g": "gray", "y": "yellow"},
+      "rows": ["...........ss...", "..........s.....", "....rrrrrrr.....", "...rrrrrrrrrry..", "..rrrrrrrrrrrr..",
+               ".ggg.......ggg..", "gsssg.....gsssg.", "gsgsg.....gsgsg.", "gsssg.....gsssg.", ".ggg.......ggg.."]
+    },
+    "vest": {
+      "palette": {"o": "orange", "y": "yellow", "w": "white"},
+      "rows": ["..oo....oo..", ".ooo....ooo.", "oooo....oooo", ".oooo..oooo.", ".oooo..oowo.", ".yyyy..yyyy.",
+               ".oooo..oooo.", ".oooo..oooo.", ".yyyy..yyyy.", ".oooo..oooo."]
+    },
+    "book": {
+      "palette": {"b": "brown", "w": "white", "k": "slate"},
+      "rows": [".bbbb..bbbb.", "bwwwwbbwwwwb", "bwkkwbbwkkwb", "bwwwwbbwwwwb", "bwkkwbbwkkwb", "bwwwwbbwwwwb",
+               "bwkkwbbwkkwb", ".bbbbbbbbbb."]
+    },
+    "scroll": {
+      "palette": {"w": "white", "s": "silver", "r": "red"},
+      "rows": ["..wwwwwwwwwww.", ".swwwwwrrwwwws", "swwwwwwrrwwwws", "swwwwwwrrwwwws", ".swwwwwrrwwws.", "......r..r...."]
+    },
+    "gown": {
+      "palette": {"n": "navy", "y": "yellow", "w": "white"},
+      "rows": ["..nnnnnnnn..", "nnnnnnnnnnnn", "..nnnnnnnny.", "...nnnnnn.y.", "...nwwwwn...", "..nnnwwnnn..",
+               ".nnnnnnnnnn.", ".nnnnnnnnnn.", "nnnnnnnnnnnn", "nnnnnnnnnnnn", "nnnnnnnnnnnn"]
+    },
+    "crown": {
+      "palette": {"y": "yellow", "Y": "#d8a03a", "r": "#e83b3b"},
+      "rows": ["y....y....y", "yy..yyy..yy", "yyy.yyy.yyy", "yyyyyyyyyyy", "yyryyyyyryy", "yyyyyyyyyyy", "YYYYYYYYYYY"]
+    },
+    "church": {
+      "palette": {"y": "yellow", "w": "white", "b": "brown", "c": "sky"},
+      "rows": [".....y.....", "....yyy....", ".....y.....", "....www....", "...wwwww...", "..wwwcwww..",
+               ".wwwwwwwww.", "wwwwwwwwwww", "wcwwwbwwwcw", "wcwwbbbwwcw", "wwwwbbbwwww"]
+    }
+  },
+  "episodes": [
+    {
+      "title": "EP1 มหาวิทยาลัยแห่งแรกคือวินมอเตอร์ไซค์",
+      "caption": "มหาวิทยาลัยแห่งแรกๆ ของโลก เกิดขึ้นแบบเดียวกับวินมอเตอร์ไซค์ปากซอย #ความรู้ #ประวัติศาสตร์ #มหาวิทยาลัย #รู้จากtiktok",
+      "scenes": [
+        {"bg": "city", "say": "มหาวิทยาลัยแห่งแรกๆ ของโลก เกิดแบบเดียวกับวินมอเตอร์ไซค์เกือบเป๊ะ",
+         "actors": [{"who": "cat", "pose": "shock", "x": 34, "scale": 3}, {"who": "adult", "pose": "happy", "x": 118, "color": "orange"}],
+         "props": [{"sprite": "bike", "x": 112, "y": 170, "scale": 3}, {"sprite": "gown", "x": 60, "y": 82, "scale": 3, "anim": "bounce"},
+                   {"sprite": "question", "x": 132, "y": 70, "anim": "float"}],
+         "labels": [{"text": "มหาลัย = วิน?", "x": 84, "y": 60, "size": 3, "color": "yellow"}]},
+
+        {"bg": "city", "say": "คนขับวินไม่ใช่พนักงานบริษัทไหน แต่ใส่เสื้อกั๊กเหมือนกัน",
+         "actors": [{"who": "cat", "pose": "point", "x": 30}, {"who": "adult", "pose": "idle", "x": 80, "color": "orange"},
+                    {"who": "adult", "pose": "idle", "x": 120, "color": "orange", "hair": "black", "flip": true}],
+         "props": [{"sprite": "vest", "x": 100, "y": 80, "scale": 3, "anim": "pop", "on": "เสื้อกั๊ก"}]},
+
+        {"bg": "city", "say": "มีหัวหน้าวิน มีกติกาเรื่องคิวและค่าโดยสาร",
+         "actors": [{"who": "cat", "pose": "think", "x": 30}, {"who": "adult", "pose": "point", "x": 100, "color": "orange"}],
+         "props": [{"sprite": "money", "x": 132, "y": 120, "anim": "pop", "on": "ค่าโดยสาร"}],
+         "labels": [{"text": "หัวหน้าวิน", "x": 100, "y": 62, "color": "orange", "anim": "pop"},
+                    {"text": "คิว 1-2-3", "x": 70, "y": 85, "size": 1, "color": "white", "anim": "pop", "on": "คิว"}]},
+
+        {"bg": "city", "say": "คนนอกมาแย่งลูกค้า ทั้งวินจะรวมตัวกันต่อรอง",
+         "actors": [{"who": "adult", "pose": "shock", "x": 30, "color": "gray"}, {"who": "adult", "pose": "point", "x": 90, "color": "orange", "flip": true},
+                    {"who": "adult", "pose": "point", "x": 125, "color": "orange", "hair": "black", "flip": true}],
+         "props": [{"sprite": "exclaim", "x": 30, "y": 80, "anim": "shake"}],
+         "labels": [{"text": "รวมตัว!", "x": 108, "y": 64, "color": "red", "anim": "pop", "on": "รวมตัว"}]},
+
+        {"bg": "city", "say": "คนเดียวไม่มีเสียง แต่รวมกันเป็นวินก็มีอำนาจทันที",
+         "actors": [{"who": "cat", "pose": "happy", "x": 30}, {"who": "adult", "pose": "sad", "x": 80, "color": "orange"},
+                    {"who": "adult", "pose": "happy", "x": 115, "color": "orange", "on": "รวมกัน", "anim": "pop"},
+                    {"who": "adult", "pose": "happy", "x": 135, "color": "orange", "hair": "black", "on": "รวมกัน", "anim": "pop"}],
+         "labels": [{"text": "1 คน = เงียบ", "x": 90, "y": 62, "size": 1, "color": "silver"},
+                    {"text": "วิน = มีอำนาจ", "x": 90, "y": 80, "color": "yellow", "anim": "pop", "on": "มีอำนาจ"}]},
+
+        {"bg": "plain", "say": "ย้อนไปเกือบพันปี นับปู่ของปู่ขึ้นไปสามสิบกว่าชั้น",
+         "actors": [{"who": "cat", "pose": "think", "x": 30}, {"who": "adult", "pose": "idle", "x": 80, "hair": "silver", "skin": "#c89070"},
+                    {"who": "adult", "pose": "idle", "x": 120, "hair": "silver", "color": "brown", "on": "ปู่ของปู่"}],
+         "labels": [{"text": "~1,000 ปีก่อน", "x": 90, "y": 62, "size": 3, "color": "yellow", "anim": "pop"},
+                    {"text": "30+ ชั้น", "x": 100, "y": 90, "color": "cyan", "anim": "pop", "on": "สามสิบ"}]},
+
+        {"bg": "city", "say": "ที่โบโลญญา อิตาลี มีครูกฎหมายเก่งๆ ไม่กี่คน",
+         "actors": [{"who": "cat", "pose": "point", "x": 30}, {"who": "adult", "pose": "happy", "x": 100, "color": "purple", "hair": "brown"}],
+         "props": [{"sprite": "book", "x": 132, "y": 120, "scale": 2, "anim": "float"}],
+         "labels": [{"text": "โบโลญญา", "x": 92, "y": 62, "size": 3, "color": "lime", "anim": "pop"}]},
+
+        {"bg": "city", "say": "ยุโรปตอนนั้นเมืองโต การค้าข้ามเมืองมากขึ้น",
+         "actors": [{"who": "adult", "pose": "happy", "x": 50, "color": "green"}, {"who": "adult", "pose": "point", "x": 115, "color": "teal", "flip": true}],
+         "props": [{"sprite": "coin", "x": 82, "y": 110, "anim": "bounce", "on": "การค้า"}, {"sprite": "house", "x": 132, "y": 70, "anim": "pop", "on": "เมืองโต"}]},
+
+        {"bg": "office", "say": "ค้าขายมากก็ทะเลาะเรื่องสัญญาและหนี้มาก คนรู้กฎหมายจึงเป็นที่ต้องการ",
+         "actors": [{"who": "adult", "pose": "shock", "x": 40, "color": "green"}, {"who": "adult", "pose": "sad", "x": 80, "color": "teal", "flip": true},
+                    {"who": "adult", "pose": "point", "x": 125, "color": "purple", "hair": "brown", "on": "คนรู้กฎหมาย", "anim": "pop"}],
+         "props": [{"sprite": "scroll", "x": 60, "y": 90, "anim": "shake", "on": "สัญญา"}],
+         "labels": [{"text": "สัญญา! หนี้!", "x": 60, "y": 62, "color": "red", "anim": "shake"}]},
+
+        {"bg": "room", "say": "ตำรากฎหมายโรมันโบราณที่หายไปนาน ก็เพิ่งถูกขุดกลับมาอ่านพอดี",
+         "actors": [{"who": "cat", "pose": "shock", "x": 34}, {"who": "adult", "pose": "happy", "x": 115, "color": "purple", "hair": "brown"}],
+         "props": [{"sprite": "book", "x": 80, "y": 110, "scale": 3, "anim": "pop", "on": "ขุดกลับมา"}, {"sprite": "star", "x": 80, "y": 80, "anim": "float", "on": "ขุดกลับมา"}],
+         "labels": [{"text": "ตำราโรมัน", "x": 90, "y": 62, "color": "yellow"}]},
+
+        {"bg": "city", "say": "เด็กหนุ่มจากเมืองไกลมาเช่าห้องใกล้ครู คล้ายเด็กต่างจังหวัดเช่าหอใกล้ที่กวดวิชา",
+         "actors": [{"who": "kid", "pose": "happy", "x": 50, "color": "blue"}, {"who": "kid", "pose": "point", "x": 80, "color": "red", "hair": "black"},
+                    {"who": "adult", "pose": "idle", "x": 125, "color": "purple", "hair": "brown", "flip": true}],
+         "props": [{"sprite": "house", "x": 128, "y": 80, "anim": "pop", "on": "เช่าห้อง"}]},
+
+        {"bg": "room", "say": "แต่คนแปลกหน้าโดนเอาเปรียบง่าย ค่าเช่าขึ้น ร้านโก่งราคา",
+         "actors": [{"who": "kid", "pose": "sad", "x": 40, "color": "blue"}, {"who": "adult", "pose": "happy", "x": 115, "color": "gray", "flip": true}],
+         "props": [{"sprite": "house", "x": 80, "y": 90, "anim": "pop", "on": "ค่าเช่า"}, {"sprite": "money", "x": 100, "y": 70, "anim": "shake", "on": "โก่งราคา"}],
+         "labels": [{"text": "ขึ้นราคา!", "x": 90, "y": 60, "color": "red", "anim": "pop", "on": "ค่าเช่าขึ้น"}]},
+
+        {"bg": "office", "say": "ศาลท้องถิ่นก็ไม่ค่อยเข้าข้างคนนอก",
+         "actors": [{"who": "kid", "pose": "sad", "x": 40, "color": "blue"}, {"who": "adult", "pose": "idle", "x": 115, "color": "black", "hair": "silver", "flip": true}],
+         "props": [{"sprite": "cross", "x": 75, "y": 90, "scale": 3, "anim": "pop"}],
+         "labels": [{"text": "ศาล", "x": 110, "y": 62, "size": 3, "color": "silver"}]},
+
+        {"bg": "city", "say": "นักเรียนเลยทำแบบวิน รวมตัวกันตั้งกติกาเอง",
+         "actors": [{"who": "kid", "pose": "point", "x": 40, "color": "orange"}, {"who": "kid", "pose": "happy", "x": 75, "color": "orange", "hair": "black"},
+                    {"who": "kid", "pose": "happy", "x": 110, "color": "orange"}, {"who": "cat", "pose": "happy", "x": 140, "scale": 1}],
+         "props": [{"sprite": "vest", "x": 75, "y": 75, "scale": 2, "anim": "pop", "on": "แบบวิน"}],
+         "labels": [{"text": "วินนักเรียน", "x": 90, "y": 60, "color": "orange", "anim": "pop", "on": "รวมตัว"}]},
+
+        {"bg": "city", "say": "แล้วต่อรองกับเมืองว่า ไม่ดูแลเรา จะย้ายไปเรียนเมืองอื่นทั้งกลุ่ม",
+         "actors": [{"who": "kid", "pose": "point", "x": 40, "color": "orange"}, {"who": "kid", "pose": "point", "x": 70, "color": "orange", "hair": "black"},
+                    {"who": "adult", "pose": "shock", "x": 120, "color": "red", "hair": "silver", "flip": true}],
+         "props": [{"sprite": "arrow", "x": 90, "y": 100, "anim": "bounce", "on": "ย้ายไป"}],
+         "labels": [{"text": "ย้ายหมด!", "x": 80, "y": 62, "color": "yellow", "anim": "pop", "on": "ย้ายไป"}]},
+
+        {"bg": "city", "say": "เมืองก็กลัว เพราะนักเรียนคือลูกค้ากลุ่มใหญ่",
+         "actors": [{"who": "adult", "pose": "shock", "x": 50, "color": "red", "hair": "silver", "anim": "shake"}, {"who": "cat", "pose": "happy", "x": 115}],
+         "props": [{"sprite": "coin", "x": 95, "y": 80, "anim": "bounce", "on": "ลูกค้า"}, {"sprite": "coin", "x": 120, "y": 70, "anim": "bounce", "on": "กลุ่มใหญ่"}],
+         "labels": [{"text": "ลูกค้าใหญ่", "x": 90, "y": 60, "color": "lime", "anim": "pop", "on": "ลูกค้า"}]},
+
+        {"bg": "classroom", "say": "ที่โบโลญญา นักเรียนถึงขั้นจ้างครูเอง ครูมาสายหรือสอนไม่จบตามกำหนดก็โดนปรับเงิน",
+         "actors": [{"who": "kid", "pose": "point", "x": 40, "color": "orange"}, {"who": "adult", "pose": "shock", "x": 115, "color": "purple", "hair": "brown", "flip": true}],
+         "props": [{"sprite": "money", "x": 80, "y": 100, "anim": "pop", "on": "จ้างครู"}, {"sprite": "exclaim", "x": 125, "y": 75, "anim": "shake", "on": "ปรับเงิน"}],
+         "labels": [{"text": "ครูสาย = ปรับ!", "x": 85, "y": 60, "color": "red", "anim": "pop", "on": "ปรับเงิน"}]},
+
+        {"bg": "plain", "say": "ภาษาละตินเรียกกลุ่มแบบนี้ว่า ยูนิเวอร์ซิตัส แปลว่ากลุ่มคนที่รวมเป็นหนึ่ง",
+         "actors": [{"who": "cat", "pose": "point", "x": 30}],
+         "props": [{"sprite": "vest", "x": 95, "y": 140, "anim": "pop", "on": "กลุ่มคน"}, {"sprite": "vest", "x": 115, "y": 140, "anim": "pop", "on": "กลุ่มคน"}],
+         "labels": [{"text": "universitas", "x": 95, "y": 70, "size": 3, "color": "yellow", "anim": "pop", "on": "ยูนิเวอร์ซิตัส"},
+                    {"text": "= กลุ่มที่รวมกัน", "x": 95, "y": 100, "size": 1, "color": "white", "anim": "pop", "on": "แปลว่า"}]},
+
+        {"bg": "plain", "say": "ใช้กับกลุ่มช่างหรือพ่อค้าก็ได้ ไม่ได้แปลว่าตึกหรือสถานที่",
+         "actors": [{"who": "adult", "pose": "happy", "x": 45, "color": "brown"}, {"who": "adult", "pose": "happy", "x": 80, "color": "green"}],
+         "props": [{"sprite": "house", "x": 125, "y": 120, "scale": 3, "on": "ตึก"}, {"sprite": "cross", "x": 125, "y": 120, "scale": 3, "anim": "pop", "on": "สถานที่"}],
+         "labels": [{"text": "ไม่ใช่ตึก", "x": 110, "y": 70, "color": "red", "anim": "pop", "on": "ไม่ได้แปล"}]},
+
+        {"bg": "plain", "say": "คำว่ายูนิเวอร์ซิตี้ ก็มาจากคำนี้",
+         "actors": [{"who": "cat", "pose": "happy", "x": 30}],
+         "props": [{"sprite": "arrow", "x": 95, "y": 100, "scale": 2, "anim": "bounce"}],
+         "labels": [{"text": "universitas", "x": 95, "y": 70, "size": 2, "color": "silver"},
+                    {"text": "university", "x": 95, "y": 130, "size": 3, "color": "yellow", "anim": "pop", "on": "ก็มาจาก"}]},
+
+        {"bg": "plain", "say": "นักประวัติศาสตร์มักนับว่าโบโลญญาเริ่มราวปี 1088",
+         "actors": [{"who": "adult", "pose": "think", "x": 40, "color": "navy", "hair": "silver"}],
+         "labels": [{"text": "~ค.ศ. 1088", "x": 100, "y": 90, "size": 3, "color": "cyan", "anim": "pop", "on": "1088"}]},
+
+        {"bg": "plain", "say": "แต่เป็นปีที่ตกลงกันทีหลัง เพราะการรวมกลุ่มค่อยๆ เกิด ไม่มีวันตัดริบบิ้น",
+         "actors": [{"who": "cat", "pose": "think", "x": 30}, {"who": "adult", "pose": "think", "x": 120, "color": "navy", "hair": "silver", "flip": true}],
+         "props": [{"sprite": "question", "x": 75, "y": 100, "anim": "float"}],
+         "labels": [{"text": "1088 ?", "x": 90, "y": 62, "size": 3, "color": "silver"},
+                    {"text": "ไม่มีตัดริบบิ้น", "x": 85, "y": 140, "size": 1, "color": "red", "anim": "pop", "on": "ตัดริบบิ้น"}]},
+
+        {"bg": "city", "say": "ช่วงไล่เลี่ยกัน ที่ปารีสเกิดวินของฝั่งครู",
+         "actors": [{"who": "adult", "pose": "happy", "x": 50, "color": "purple", "hair": "brown"}, {"who": "adult", "pose": "happy", "x": 85, "color": "purple"},
+                    {"who": "adult", "pose": "point", "x": 120, "color": "purple", "hair": "silver", "flip": true}],
+         "labels": [{"text": "ปารีส", "x": 90, "y": 60, "size": 3, "color": "sky", "anim": "pop"},
+                    {"text": "วินครู", "x": 90, "y": 90, "color": "purple", "anim": "pop", "on": "ฝั่งครู"}]},
+
+        {"bg": "city", "say": "คนอยากเรียนมากขึ้น ครูรอบโรงเรียนของโบสถ์ใหญ่ก็รวมกลุ่มกัน",
+         "actors": [{"who": "adult", "pose": "point", "x": 40, "color": "purple", "hair": "brown"}, {"who": "kid", "pose": "happy", "x": 80, "color": "blue", "on": "อยากเรียน"},
+                    {"who": "kid", "pose": "happy", "x": 105, "color": "red", "hair": "black", "on": "อยากเรียน"}],
+         "props": [{"sprite": "church", "x": 125, "y": 90, "scale": 3, "anim": "pop", "on": "โบสถ์"}]},
+
+        {"bg": "classroom", "say": "เพื่อตัดสินเองว่าใครมีสิทธิ์เป็นครู นี่คือต้นกำเนิดของปริญญา",
+         "actors": [{"who": "cat", "pose": "shock", "x": 30}, {"who": "adult", "pose": "point", "x": 120, "color": "purple", "hair": "silver", "flip": true}],
+         "props": [{"sprite": "scroll", "x": 80, "y": 110, "scale": 3, "anim": "pop", "on": "ปริญญา"}, {"sprite": "check", "x": 80, "y": 80, "anim": "pop", "on": "มีสิทธิ์"}],
+         "labels": [{"text": "ปริญญา", "x": 85, "y": 62, "size": 3, "color": "yellow", "anim": "pop", "on": "ต้นกำเนิด"}]},
+
+        {"bg": "plain", "say": "ปริญญาเดิมก็เหมือนเสื้อกั๊กวิน บอกว่ากลุ่มยอมรับ ให้สอนในวงนี้ได้",
+         "actors": [{"who": "cat", "pose": "point", "x": 30}],
+         "props": [{"sprite": "scroll", "x": 75, "y": 120, "scale": 3}, {"sprite": "vest", "x": 125, "y": 120, "scale": 3, "anim": "pop", "on": "เสื้อกั๊ก"},
+                   {"sprite": "check", "x": 100, "y": 160, "anim": "pop", "on": "ยอมรับ"}],
+         "labels": [{"text": "ปริญญา = เสื้อกั๊ก", "x": 95, "y": 70, "size": 1, "color": "yellow", "anim": "pop", "on": "เหมือน"}]},
+
+        {"bg": "classroom", "say": "ส่วนชุดครุย ก็สืบมาจากเสื้อคลุมยาวของคนในกลุ่มยุคนั้น",
+         "actors": [{"who": "cat", "pose": "happy", "x": 30}, {"who": "kid", "pose": "happy", "x": 120, "color": "navy"}],
+         "props": [{"sprite": "gown", "x": 75, "y": 120, "scale": 4, "anim": "pop"}],
+         "labels": [{"text": "ชุดครุย", "x": 95, "y": 60, "size": 3, "color": "yellow", "anim": "pop"}]},
+
+        {"bg": "nature", "say": "ทำไมต้องมีมหาวิทยาลัย เพราะความรู้บางอย่างมีค่าจนคนยอมเดินทางไกลมาหา",
+         "actors": [{"who": "kid", "pose": "think", "x": 40, "color": "blue"}, {"who": "cat", "pose": "point", "x": 110}],
+         "props": [{"sprite": "book", "x": 135, "y": 80, "scale": 2, "anim": "float", "on": "ความรู้"}, {"sprite": "star", "x": 115, "y": 65, "anim": "pop", "on": "มีค่า"}],
+         "labels": [{"text": "ทำไม?", "x": 70, "y": 65, "size": 3, "color": "yellow"}]},
+
+        {"bg": "city", "say": "คนอยากรู้กับคนรู้มาเจอกันเยอะในเมืองเดียว ก็ต้องมีกติกากลาง",
+         "actors": [{"who": "kid", "pose": "happy", "x": 35, "color": "blue"}, {"who": "kid", "pose": "happy", "x": 60, "color": "red", "hair": "black"},
+                    {"who": "adult", "pose": "happy", "x": 100, "color": "purple", "flip": true}, {"who": "adult", "pose": "point", "x": 128, "color": "purple", "hair": "silver", "flip": true}],
+         "labels": [{"text": "กติกากลาง", "x": 85, "y": 62, "color": "lime", "anim": "pop", "on": "กติกา"}]},
+
+        {"bg": "plain", "say": "ว่าใครสอนได้ ใครเรียนจบ และใครปกป้องจากคนนอก",
+         "actors": [{"who": "cat", "pose": "point", "x": 30}],
+         "labels": [{"text": "ใครสอนได้?", "x": 95, "y": 70, "color": "yellow", "anim": "pop", "on": "สอนได้"},
+                    {"text": "ใครจบแล้ว?", "x": 95, "y": 105, "color": "cyan", "anim": "pop", "on": "เรียนจบ"},
+                    {"text": "ใครปกป้อง?", "x": 95, "y": 140, "color": "orange", "anim": "pop", "on": "ปกป้อง"}]},
+
+        {"bg": "office", "say": "โบสถ์อยากได้คนอ่านออกเขียนได้ กษัตริย์อยากได้นักกฎหมายช่วยบริหาร",
+         "actors": [{"who": "adult", "pose": "point", "x": 45, "color": "white", "hair": "silver"}, {"who": "adult", "pose": "point", "x": 115, "color": "red", "flip": true, "on": "กษัตริย์"}],
+         "props": [{"sprite": "church", "x": 45, "y": 80, "anim": "pop"}, {"sprite": "crown", "x": 115, "y": 82, "anim": "pop", "on": "กษัตริย์"},
+                   {"sprite": "book", "x": 80, "y": 130, "anim": "bounce"}]},
+
+        {"bg": "nature", "say": "ทุกฝ่ายจึงช่วยประคองกลุ่มพวกนี้ จนอยู่รอดมาเป็นพันปี",
+         "actors": [{"who": "cat", "pose": "happy", "x": 30}, {"who": "kid", "pose": "happy", "x": 115, "color": "navy"}],
+         "props": [{"sprite": "gown", "x": 75, "y": 120, "scale": 3, "anim": "bounce"}, {"sprite": "heart", "x": 115, "y": 80, "anim": "float"}],
+         "labels": [{"text": "รอดมา 1,000 ปี", "x": 90, "y": 62, "color": "yellow", "anim": "pop", "on": "พันปี"}]},
+
+        {"bg": "city", "say": "ถ้าตั้งวินนักเรียนได้ คุณจะต่อรองเรื่องอะไรก่อน คอมเมนต์บอกหน่อย",
+         "actors": [{"who": "cat", "pose": "point", "x": 30, "scale": 3}, {"who": "kid", "pose": "think", "x": 120, "color": "orange"}],
+         "props": [{"sprite": "vest", "x": 120, "y": 85, "anim": "bounce"}, {"sprite": "question", "x": 80, "y": 90, "anim": "float"}],
+         "labels": [{"text": "ต่อรองอะไร?", "x": 85, "y": 62, "color": "yellow", "anim": "pop"}]}
+      ]
+    }
+  ]
+}
