@@ -1,5 +1,6 @@
 {
   "series": "มหาวิทยาลัยเกิดจากวินมอเตอร์ไซค์?",
+  "voice": "en-US-EmmaMultilingualNeural",
   "max_seconds": 135,
   "rate": "+15%",
   "sprites": {
@@ -44,7 +45,7 @@
       "scenes": [
         {"bg": "city", "say": "มหาวิทยาลัยแห่งแรกๆ ของโลก เกิดแบบเดียวกับวินมอเตอร์ไซค์เกือบเป๊ะ",
          "actors": [{"who": "cat", "pose": "shock", "x": 34, "scale": 3}, {"who": "adult", "pose": "happy", "x": 118, "color": "orange"}],
-         "props": [{"sprite": "bike", "x": 112, "y": 170, "scale": 3}, {"sprite": "gown", "x": 60, "y": 82, "scale": 3, "anim": "bounce"},
+         "props": [{"sprite": "bike", "x": 112, "y": 170, "scale": 3}, {"sprite": "gown", "x": 78, "y": 115, "scale": 3, "anim": "bounce"},
                    {"sprite": "question", "x": 132, "y": 70, "anim": "float"}],
          "labels": [{"text": "มหาลัย = วิน?", "x": 84, "y": 60, "size": 3, "color": "yellow"}]},
 
@@ -69,8 +70,8 @@
          "actors": [{"who": "cat", "pose": "happy", "x": 30}, {"who": "adult", "pose": "sad", "x": 80, "color": "orange"},
                     {"who": "adult", "pose": "happy", "x": 115, "color": "orange", "on": "รวมกัน", "anim": "pop"},
                     {"who": "adult", "pose": "happy", "x": 135, "color": "orange", "hair": "black", "on": "รวมกัน", "anim": "pop"}],
-         "labels": [{"text": "1 คน = เงียบ", "x": 90, "y": 62, "size": 1, "color": "silver"},
-                    {"text": "วิน = มีอำนาจ", "x": 90, "y": 80, "color": "yellow", "anim": "pop", "on": "มีอำนาจ"}]},
+         "labels": [{"text": "1 คน = เงียบ", "x": 90, "y": 62, "size": 2, "color": "silver"},
+                    {"text": "วิน = มีอำนาจ", "x": 90, "y": 88, "color": "yellow", "anim": "pop", "on": "มีอำนาจ"}]},
 
         {"bg": "plain", "say": "ย้อนไปเกือบพันปี นับปู่ของปู่ขึ้นไปสามสิบกว่าชั้น",
          "actors": [{"who": "cat", "pose": "think", "x": 30}, {"who": "adult", "pose": "idle", "x": 80, "hair": "silver", "skin": "#c89070"},
@@ -139,7 +140,7 @@
          "actors": [{"who": "cat", "pose": "point", "x": 30}],
          "props": [{"sprite": "vest", "x": 95, "y": 140, "anim": "pop", "on": "กลุ่มคน"}, {"sprite": "vest", "x": 115, "y": 140, "anim": "pop", "on": "กลุ่มคน"}],
          "labels": [{"text": "universitas", "x": 95, "y": 70, "size": 3, "color": "yellow", "anim": "pop", "on": "ยูนิเวอร์ซิตัส"},
-                    {"text": "= กลุ่มที่รวมกัน", "x": 95, "y": 100, "size": 1, "color": "white", "anim": "pop", "on": "แปลว่า"}]},
+                    {"text": "= รวมเป็นหนึ่ง", "x": 95, "y": 100, "size": 2, "color": "white", "anim": "pop", "on": "แปลว่า"}]},
 
         {"bg": "plain", "say": "ใช้กับกลุ่มช่างหรือพ่อค้าก็ได้ ไม่ได้แปลว่าตึกหรือสถานที่",
          "actors": [{"who": "adult", "pose": "happy", "x": 45, "color": "brown"}, {"who": "adult", "pose": "happy", "x": 80, "color": "green"}],
@@ -160,7 +161,7 @@
          "actors": [{"who": "cat", "pose": "think", "x": 30}, {"who": "adult", "pose": "think", "x": 120, "color": "navy", "hair": "silver", "flip": true}],
          "props": [{"sprite": "question", "x": 75, "y": 100, "anim": "float"}],
          "labels": [{"text": "1088 ?", "x": 90, "y": 62, "size": 3, "color": "silver"},
-                    {"text": "ไม่มีตัดริบบิ้น", "x": 85, "y": 140, "size": 1, "color": "red", "anim": "pop", "on": "ตัดริบบิ้น"}]},
+                    {"text": "ไม่มีตัดริบบิ้น", "x": 85, "y": 140, "size": 2, "color": "red", "anim": "pop", "on": "ตัดริบบิ้น"}]},
 
         {"bg": "city", "say": "ช่วงไล่เลี่ยกัน ที่ปารีสเกิดวินของฝั่งครู",
          "actors": [{"who": "adult", "pose": "happy", "x": 50, "color": "purple", "hair": "brown"}, {"who": "adult", "pose": "happy", "x": 85, "color": "purple"},
@@ -182,7 +183,7 @@
          "actors": [{"who": "cat", "pose": "point", "x": 30}],
          "props": [{"sprite": "scroll", "x": 75, "y": 120, "scale": 3}, {"sprite": "vest", "x": 125, "y": 120, "scale": 3, "anim": "pop", "on": "เสื้อกั๊ก"},
                    {"sprite": "check", "x": 100, "y": 160, "anim": "pop", "on": "ยอมรับ"}],
-         "labels": [{"text": "ปริญญา = เสื้อกั๊ก", "x": 95, "y": 70, "size": 1, "color": "yellow", "anim": "pop", "on": "เหมือน"}]},
+         "labels": [{"text": "ปริญญา=เสื้อกั๊ก", "x": 95, "y": 70, "size": 2, "color": "yellow", "anim": "pop", "on": "เหมือน"}]},
 
         {"bg": "classroom", "say": "ส่วนชุดครุย ก็สืบมาจากเสื้อคลุมยาวของคนในกลุ่มยุคนั้น",
          "actors": [{"who": "cat", "pose": "happy", "x": 30}, {"who": "kid", "pose": "happy", "x": 120, "color": "navy"}],
