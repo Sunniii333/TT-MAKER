@@ -23,7 +23,8 @@ Checks: `python3 test_render.py` (offline).
   Its first frame is the thumbnail, so make it visually busy (big cat, labels, props).
 - The last scene teases the next episode ("ตอนหน้า ..."); the final episode ends with a question asking for comments.
 - Each episode must be ≤60s. Thai TTS runs about 13 chars/s, so ≈600 chars of `say` per episode. The renderer
-  stops with an error if an episode is too long; shorten wording, don't drop arguments.
+  stops with an error if an episode is too long; shorten wording, don't drop arguments. Only when the user asks for a
+  longer single video, set top-level `"max_seconds"` (e.g. 180) instead of splitting.
 - `caption`: one line + 3–5 hashtags, include "(ตอน N/M)" for series.
 
 ## script.json reference

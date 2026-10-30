@@ -273,8 +273,9 @@ def render_episode(spec, ep, n, total, out_dir):
     voice = spec.get("voice", VOICE)
     scenes = [Scene(sc, spec, voice) for sc in ep["scenes"]]
     secs = sum(s.frames for s in scenes) / FPS
-    if secs > MAX_SECONDS:
-        raise SystemExit(f"EP{n}: {secs:.1f}s is over {MAX_SECONDS}s; shorten or split the episode")
+    limit = spec.get("max_seconds", MAX_SECONDS)
+    if secs > limit:
+        raise SystemExit(f"EP{n}: {secs:.1f}s is over {limit}s; shorten or split the episode")
 
     spf = SR // FPS
     audio = np.zeros(sum(s.frames for s in scenes) * spf, np.float32)
