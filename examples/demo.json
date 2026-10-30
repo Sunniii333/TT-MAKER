@@ -1,0 +1,23 @@
+{
+  "series": "ตัวอย่าง",
+  "voice": "th-TH-PremwadeeNeural",
+  "sprites": {
+    "piggy": {"palette": {"p": "pink", "d": "red", "k": "black"},
+              "rows": ["..pp....", ".pppppp.", "pkpppppp", "pppppppd", ".pppppp.", ".p.p.p.."]}
+  },
+  "episodes": [{
+    "title": "EP1 ออมเงินวันละนิด",
+    "caption": "เก็บวันละ 10 บาท ปีหนึ่งได้เท่าไร #ออมเงิน #การเงิน #ความรู้",
+    "scenes": [
+      {"bg": "room", "say": "ถ้าเก็บเงินวันละสิบบาท ครบปีจะได้เท่าไร",
+       "actors": [{"who": "cat", "pose": "think", "x": 50, "scale": 3}],
+       "props": [{"sprite": "piggy", "x": 120, "y": 150, "scale": 3, "anim": "bounce"},
+                 {"sprite": "question", "x": 70, "y": 100, "anim": "pop"}],
+       "labels": [{"text": "10 บาท/วัน", "x": 90, "y": 70, "size": 2, "color": "yellow"}]},
+      {"bg": "plain", "say": "สามร้อยหกสิบห้าวัน ได้สามพันหกร้อยห้าสิบบาท",
+       "actors": [{"who": "cat", "pose": "happy", "x": 50}],
+       "props": [{"sprite": "coin", "x": 120, "y": 140, "scale": 3, "anim": "pop", "on": "สามพัน"}],
+       "labels": [{"text": "3,650 บาท", "x": 90, "y": 80, "size": 3, "color": "lime", "anim": "pop", "on": "สามพัน"}]}
+    ]
+  }]
+}

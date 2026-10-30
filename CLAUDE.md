@@ -1,16 +1,20 @@
 # TT-MAKER
 
 Turns a document (txt/md/pdf) into 16-bit pixel-art TikTok clips (1080x1920, ≤60s each) narrated in Thai.
-Claude writes `series/<slug>/script.json`; `render.py` turns it into `out/<slug>/epN.mp4` + `epN.txt` (caption).
+Claude writes `work/<slug>/script.json`; `render.py` turns it into `out/<slug>/epN.mp4` + `epN.txt` (caption).
 
-## Workflow (per document)
+**This repo holds the tool only, never a user's clips.** `work/`, `out/` and `cache/` are gitignored. Never commit,
+push or open a branch/PR for clip work; only change the repo when the user asks to change the tool itself.
 
-1. User sends a document and says "ทำคลิป".
-2. Write `series/<slug>/script.json` (slug: short English kebab-case). Decide the number of episodes from the content.
+## Workflow (per topic)
+
+1. User sends a document or a storytelling idea and says "ทำคลิป". If they attach an old `script.json`, it is a
+   revision: copy it to `work/<slug>/script.json` and edit it.
+2. Write `work/<slug>/script.json` (slug: short English kebab-case). Decide the number of episodes from the content.
 3. Summarise the script in chat (episode titles + every `say` line) and **wait for the user's OK**. Never render before approval.
-4. `python3 render.py series/<slug>/script.json` (`--ep N` for one episode). Fix any errors it prints and rerun.
-5. Look at a few frames (`ffmpeg ... -vf select=...,tile`) before sending; send the mp4 + txt files to the user.
-6. Commit `series/<slug>/script.json` only. `out/` and `cache/` are gitignored.
+4. `python3 render.py work/<slug>/script.json` (`--ep N` for one episode). Fix any errors it prints and rerun.
+5. Look at a few frames (`ffmpeg ... -vf select=...,tile`) before sending; send each `epN.mp4` + `epN.txt` and the
+   `script.json` (the user keeps it to request edits later). Do not commit anything.
 
 Checks: `python3 test_render.py` (offline).
 
@@ -41,6 +45,8 @@ Checks: `python3 test_render.py` (offline).
 }
 ```
 
+- `max_seconds` (optional, default 60): per-episode length limit, for when the user asks for longer clips.
+- `rate` (optional, default "+0%"): edge-tts speaking rate, e.g. "+15%" to fit more words in.
 - Coordinates are on a 180x320 canvas. The scene lives in y 0–186 (floor/feet at y=186); the subtitle box covers
   y≈196–251; keep things out of the top ~50px (TikTok header + EP badge) and right of x≈150 (TikTok buttons).
 - `bg`: classroom, room, city, nature, space, office, plain (dark grid, good for numbers/infographics).

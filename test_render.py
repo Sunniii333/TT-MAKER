@@ -13,7 +13,7 @@ for who in L.ACTORS:
     for pose in L.POSES:
         L.actor(who, pose, talk=True, blink=False)
 
-example = json.loads(Path(__file__).with_name("series").joinpath("democratic-socialism", "script.json").read_text())
+example = json.loads(Path(__file__).with_name("examples").joinpath("demo.json").read_text())
 assert R.validate(example) == [], R.validate(example)
 
 bad = {"sprites": {"x": {"palette": {"a": "red"}, "rows": ["ab", "a"]}},

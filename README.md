@@ -16,7 +16,9 @@
    - ประเด็นสำคัญหรือข้อโต้แย้งไม่หายไป
    - hook ในประโยคแรกน่าดึงคนให้หยุดเลื่อน
 4. **ตอบ `ok`** หรือสั่งแก้ก่อนก็ได้ เช่น "ตอน 2 ฉาก 3 พูดยาวไป", "เปลี่ยน hook ตอน 1 ให้เป็นคำถาม" Claude จะยังไม่ render จนกว่าคุณจะ ok
-5. **รับไฟล์** ต่อตอนจะได้ `epN.mp4` (คลิป) กับ `epN.txt` (caption + hashtag)
+5. **รับไฟล์** ต่อตอนจะได้ `epN.mp4` (คลิป) กับ `epN.txt` (caption + hashtag) และได้ `script.json` ของเรื่องนั้น 1 ไฟล์ เก็บไว้เอง ถ้าวันหลังอยากแก้ ให้แนบไฟล์นี้กลับมา
+
+> repo นี้เก็บแค่เครื่องมือ Claude จะไม่ commit หรือ push งานคลิปของคุณ จึงไม่มี branch ใหม่โผล่บน GitHub
 6. **โพสต์ TikTok:**
    - อัปโหลด `epN.mp4`
    - copy ข้อความใน `epN.txt` ไปวางเป็น caption
@@ -62,16 +64,16 @@ pip install -r requirements.txt
 
 ## รันเองโดยไม่ผ่าน Claude
 
-ถ้าแก้ `series/<ชื่อเรื่อง>/script.json` เอง ใช้คำสั่งพวกนี้ได้
+ถ้าแก้ `script.json` เอง (วางไว้ที่ `work/<ชื่อเรื่อง>/script.json` ซึ่ง git ไม่เก็บ) ใช้คำสั่งพวกนี้ได้
 
 render ทุกตอน:
 ```bash
-python3 render.py series/democratic-socialism/script.json
+python3 render.py work/<ชื่อเรื่อง>/script.json
 ```
 
 render เฉพาะตอนที่ 2:
 ```bash
-python3 render.py series/democratic-socialism/script.json --ep 2
+python3 render.py work/<ชื่อเรื่อง>/script.json --ep 2
 ```
 
 ตรวจว่าโค้ดยังทำงานปกติ:
